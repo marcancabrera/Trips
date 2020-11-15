@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-
+import 'description_place.dart';
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  String namePlace = 'Peru';
+  String description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend rutrum pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut pharetra purus pharetra lectus tempus, sit amet iaculis tortor egestas.";
+  int stars = 5;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,37 +31,8 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          leading: IconButton(
-            onPressed: null,
-            icon: Icon(Icons.arrow_back, color: Colors.white),
-          ),
-          backgroundColor: Colors.green,
-          title: Text('Share'),
         ),
-        body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("images/jupiter.png"),
-              fit: BoxFit.cover,
-              ),
-            ),
-            child:Center(
-              child: Container(
-                height: 100,
-                width: 500,
-                color: Color.fromRGBO(0, 0, 0, .5),
-                child: Center(
-                  child: Text('L o a d i n g . . .',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: 'Raleway',
-                      fontSize: 40,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-        ),
+        body: new DescriptionPlace(namePlace, description, stars),
       ),
     );
   }
