@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'review.dart';
 import 'description_place.dart';
 void main() {
   runApp(MyApp());
@@ -7,8 +8,11 @@ void main() {
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   String namePlace = 'Peru';
-  String description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend rutrum pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut pharetra purus pharetra lectus tempus, sit amet iaculis tortor egestas.";
+  String description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
   int stars = 5;
+
+  String pathImage = "assets/images/bulb.jpg";
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,7 +36,12 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
         ),
-        body: new DescriptionPlace(namePlace, description, stars),
+        body: Column(
+          children: <Widget>[
+            DescriptionPlace(namePlace, description, stars),
+            Review(pathImage),
+          ],
+        ),
       ),
     );
   }

@@ -67,7 +67,7 @@ class DescriptionPlace extends StatelessWidget{
         style: TextStyle(
           color: Color.fromRGBO(0, 0, 0, .6),
           fontSize: 16.0,
-          fontFamily: 'Raleway'
+          fontFamily: 'Lato'
         ),
         textAlign: TextAlign.left,
       ),
@@ -84,6 +84,7 @@ class DescriptionPlace extends StatelessWidget{
           child: Text(
             namePlace,
             style: TextStyle(
+              fontFamily: 'Lato',
               fontSize: 30.0,
               fontWeight: FontWeight.w900
             ),
@@ -95,6 +96,7 @@ class DescriptionPlace extends StatelessWidget{
         ),
       ],
     );
+
     return Column(
       children: <Widget>[
         title_stars,
