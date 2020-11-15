@@ -62,7 +62,7 @@ class DescriptionPlace extends StatelessWidget{
         right: 40.0,
         left: 20.0
       ),
-      child: new Text(
+      child: Text(
         descriptionPlace,
         style: TextStyle(
           color: Color.fromRGBO(0, 0, 0, .6),

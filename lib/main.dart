@@ -12,6 +12,9 @@ class MyApp extends StatelessWidget {
   int stars = 5;
 
   String pathImage = "assets/images/bulb.jpg";
+  String userName = "Fulaniu Masseir";
+  String userInfo = "2 Photos 5 Reviews";
+  String userComments = "This place is so great and I'm funny lol";
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +42,7 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: <Widget>[
             DescriptionPlace(namePlace, description, stars),
-            Review(pathImage),
+            Review(pathImage, userName, userInfo, userComments),
           ],
         ),
       ),
