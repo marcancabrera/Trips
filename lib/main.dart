@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/review_list.dart';
 import 'review.dart';
 import 'description_place.dart';
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   int stars = 5;
 
   String pathImage = "assets/images/bulb.jpg";
-  String userName = "Fulaniu Masseir";
+  String userName = "aoeu   Masseir";
   String userInfo = "2 Photos 5 Reviews";
   String userComments = "This place is so great and I'm funny lol";
 
@@ -39,11 +40,11 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
         ),
-        body: Column(
-          children: <Widget>[
-            DescriptionPlace(namePlace, description, stars),
-            Review(pathImage, userName, userInfo, userComments),
-          ],
+        body: ListView(
+            children: [
+              DescriptionPlace(namePlace, description, stars),
+              ReviewList(),
+            ],
         ),
       ),
     );

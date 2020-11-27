@@ -15,7 +15,8 @@ class Review extends StatelessWidget{
       width: 16.0,
       child: Icon(
         Icons.star,
-        color: Color(0xFFa3a5a7),
+        size: 15.0,
+        color: Color(0xFFf2C611),
       ),
     );
 
