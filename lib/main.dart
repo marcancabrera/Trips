@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/review_list.dart';
-import 'review.dart';
 import 'description_place.dart';
+import 'gradient.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -9,7 +10,8 @@ void main() {
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   String namePlace = 'Peru';
-  String description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
+  String description =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
   int stars = 5;
 
   String pathImage = "assets/images/bulb.jpg";
@@ -38,13 +40,17 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
-        appBar: AppBar(
-        ),
-        body: ListView(
-            children: [
-              DescriptionPlace(namePlace, description, stars),
-              ReviewList(),
-            ],
+        //appBar: AppBar(),
+        body: Stack(
+          children: [
+            ListView(
+              children: [
+                DescriptionPlace(namePlace, description, stars),
+                ReviewList(),
+              ],
+            ),
+            GradientBack()
+          ],
         ),
       ),
     );

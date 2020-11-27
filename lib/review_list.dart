@@ -16,6 +16,10 @@ class ReviewList extends StatelessWidget {
         Review(pathImage, userName, userInfo, userComments),
         Review(pathImage, userName, userInfo, userComments),
         Review(pathImage, userName, userInfo, userComments),
+        Review(pathImage, userName, userInfo, userComments),
+        Review(pathImage, userName, userInfo, userComments),
+        Review(pathImage, userName, userInfo, userComments),
+        Review(pathImage, userName, userInfo, userComments),
       ],
     );
   }
