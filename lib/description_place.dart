@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'button.dart';
 //import 'package:flutter/semantics.dart';
 
 class DescriptionPlace extends StatelessWidget{
@@ -22,7 +24,7 @@ class DescriptionPlace extends StatelessWidget{
     );
 
 
-    final star_border = Container(
+    final starBorder = Container(
       margin: EdgeInsets.only(
         top: 320.0,
         right: 3.0
@@ -51,7 +53,7 @@ class DescriptionPlace extends StatelessWidget{
         listStars.add(star);
       }
       for(int i=0 ; i<rest ; i++){
-        listStars.add(star_border);
+        listStars.add(starBorder);
       }
       return listStars;
     }
@@ -73,7 +75,7 @@ class DescriptionPlace extends StatelessWidget{
       ),
     );
 
-    final title_stars = Row(
+    final titleStars = Row(
       children: <Widget>[
         Container(
           margin: EdgeInsets.only(
@@ -98,10 +100,11 @@ class DescriptionPlace extends StatelessWidget{
     );
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        title_stars,
+        titleStars,
         description,
-        description
+        Button('Navigate'),
         ],
       );
   }
